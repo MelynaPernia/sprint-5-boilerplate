@@ -1,25 +1,63 @@
-<!-- Mostrar en este HTML las respuestas de cada topic -->
-
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
 
-    <h1>Aqui va el contenido de tema individual</h1>
-    <!-- Borar cuando se entienda como pasar info con topic id-->
-    <h1>Ingresa el topic id a este html usando la url.</h1>
-    <a href='verTopic.html?topic_id=2'>Algo asi</a><br/>
-    <a href='verTopic.html?topic_id=1'>O asi</a>
-    <!-- Borar cuando se entienda como pasar info con topic id-->
-    
-     <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+<head>
+  <meta charset="utf-8">
+  <title>Respuesta del Foro</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <h2 class="text-center">Foro cool</h2>
+    <h4 class="topic"></h4>
+    <p class="content-topic"></p>
+    <button type="button" class="btn btn-outline-primary text-uppercase mb-5 btn-create-answers">Respuestas</button>
+    <button type="button" class="btn btn-outline-primary text-uppercase mb-5 ">
+      <a href="index.html">
+        <</a>
+    </button>
+    <!-- Formulario para responder el foro -->
+    <form class="form-topic-answers" hidden>
+      <div class="form-group row">
+        <label for="name-user" class="col-sm-2 col-form-label">Autor: </label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" id="name-user" placeholder="Ejem. Juan Perez">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="colFormLabel" class="col-sm-2 col-form-label">Mensaje: </label>
+        <div class="col-sm-8">
+          <textarea class="form-control" id="menssage" rows="3"></textarea>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-outline-primary text-uppercase mb-5 btn-answers">Responder</button>
+      <button type="button" class="btn btn-outline-primary text-uppercase mb-5 btn-answers btn-close">x</button>
+    </form>
+
+  </div>
+
+  <!--Lista de las respuestas-->
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <table class="table table-hover">
+          <tbody class="list-answers" id="table-answers">
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
 
 
-    <script src="js/functions.js"></script>
-    <script src="js/verTopic.js"></script>
-  </body>
+  <!-- jQuery -->
+
+  <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+  <script src="js/functions.js"></script>
+  <script src="js/verTopic.js"></script>
+</body>
+
 </html>
