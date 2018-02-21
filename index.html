@@ -1,20 +1,60 @@
-<!-- mostrar en este HTML los TOPICS de /topics -->
-
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
 
-    <h1>Aqui van todos los temas</h1>
-    
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
-    
-    <script src="js/functions.js"></script>
-    <script src="js/main.js"></script>
-    
-  </body>
+<head>
+  <meta charset="utf-8">
+  <title>Foro</title>
+</head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="css/main.css">
+
+<body>
+  <section>
+    <div class="container">
+      <div class="text-center">
+        <h1>Foro Cool</h1>
+        <hr>
+      </div>
+      <button type="button" class="btn btn-outline-primary text-uppercase mb-5 btn-create-topic">Crear tema</button>
+      <!--Formulario para crear tema-->
+      <form class="form-topic" hidden>
+        <div class="form-group row">
+          <label for="name-topic" class="col-sm-2 col-form-label">Tema: </label>
+          <div class="col-sm-8">
+            <input type="text" class="form-control" id="name-topic" placeholder="Tema...">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="name-user" class="col-sm-2 col-form-label">Autor: </label>
+          <div class="col-sm-8">
+            <input type="text" class="form-control" id="name-user" placeholder="Ejem. Juan Perez">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="colFormLabel" class="col-sm-2 col-form-label">Mensaje: </label>
+          <div class="col-sm-8">
+            <textarea class="form-control" id="menssage" rows="3"></textarea>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-outline-primary text-uppercase mb-5 btn-accept">Aceptar</button>
+      </form>
+      <!--Lista de los temas creados-->
+      <div class="row">
+        <div class="col-12">
+          <table class="table table-hover">
+            <tbody class="list-topic" id="table-topic">
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+  <script src="js/functions.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
 </html>
