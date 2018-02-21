@@ -24,4 +24,28 @@ $(function () {
             getData(data);
         }
     });
+    btnAceptar.click(function (e) {
+        e.preventDefault();
+    
+        let authorName = $('#name-user').val(); 
+        let topic = $('#name-topic').val(); 
+    
+    
+        let dataTopic = {
+            'author_name': authorName,
+            'content': topic
+        }
+        $.post(url, dataTopic, function (data) {
+    
+        }) 
+    });
+    
+    $('#table-topic').on('click', 'tr',function(e){
+    
+    
+        let idTopic = $(this).data(); //opteniendo el id
+    
+        location.href=`verTopic.html?topic_id=${idTopic.id}`;
+    
+    })
 }
