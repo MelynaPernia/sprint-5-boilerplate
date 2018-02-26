@@ -48,7 +48,7 @@ $(function () {
   });
 
   $('#table-topic').on('click', 'tr', function (e) {
-    let idTopic = $(this).data(); //opteniendo el id    
+    let idTopic = $(this).data(); //obteniendo el id    
     location.href = `verTopic.html?topic_id=${idTopic.id}`;
   });
 });
